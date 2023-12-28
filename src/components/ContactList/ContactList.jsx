@@ -3,8 +3,8 @@ import css from './ContactList.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 
-import { deleteContactsThunk, getContactsThunk } from '../../redux/contactsThunk';
-import { selectFilteredContacts } from '../../redux/contactSelector';
+import { deleteContactsThunk, getContactsThunk } from '../../redux/contacts/contactsThunk';
+import { selectFilteredContacts } from '../../redux/contacts/contactSelector';
 
 
 function ContactList() {

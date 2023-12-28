@@ -3,7 +3,7 @@ import {
   deleteContact,
   fetchContacts,
   addContact,
-} from '../services/contactService';
+} from '../../services/contactService';
 
 export const getContactsThunk = createAsyncThunk(
   'contacts/fetchAll',

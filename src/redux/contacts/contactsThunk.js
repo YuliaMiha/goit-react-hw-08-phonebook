@@ -4,15 +4,21 @@ import {
   fetchContacts,
   addContact,
 } from '../../services/contactService';
+import { token } from '../../services/authService';
 
 export const getContactsThunk = createAsyncThunk(
   'contacts/fetchAll',
-  async (_, thunkAPI) => {
+  async (_, { rejectWithValue, getState }) => {
     try {
+      const savedToken = getState().auth.token;
+      if (!savedToken) {
+        return rejectWithValue('there is no token');
+      }
+      token.set(savedToken);
       const resp = await fetchContacts();
       return resp;
     } catch {
-      return thunkAPI.rejectWithValue();
+      return rejectWithValue();
     }
   }
 );

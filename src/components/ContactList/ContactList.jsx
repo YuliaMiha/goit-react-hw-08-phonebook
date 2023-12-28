@@ -1,14 +1,17 @@
 import React from 'react';
-import css from './ContactList.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-
-import { deleteContactsThunk, getContactsThunk } from '../../redux/contacts/contactsThunk';
+import {
+  deleteContactsThunk,
+  getContactsThunk,
+} from '../../redux/contacts/contactsThunk';
 import { selectFilteredContacts } from '../../redux/contacts/contactSelector';
 
+import scss from './ContactList.module.scss';
 
 function ContactList() {
   const contacts = useSelector(selectFilteredContacts);
+
   const dispatch = useDispatch();
   const delateContact = id => dispatch(deleteContactsThunk(id));
 
@@ -16,24 +19,25 @@ function ContactList() {
     dispatch(getContactsThunk());
   }, [dispatch]);
 
-
   const contact = contacts.map(({ name, number, id }) => (
-    <li key={id} className={css.item}>
-      <p className={css.item__text}>
-        {name} : {number}
-      </p>
+    <li key={id} className={scss.item}>
+      <p className={scss.item__text}>{name}</p>
+      <p className={scss.item__text}>{number}</p>
       <button
-        className={css.item__button}
+        className={scss.item__button}
         onClick={() => delateContact(id)}
         type="button"
       >
-        Delete
+        Delate
       </button>
     </li>
   ));
 
-  return <ul className={css.list}>{contact}</ul>;
+  return (
+    <div className={scss.overList}>
+      <ul className={scss.wrapperList}>{contact}</ul>
+    </div>
+  );
 }
-
 
 export default ContactList;

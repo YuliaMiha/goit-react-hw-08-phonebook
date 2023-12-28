@@ -28,7 +28,7 @@ function ContactList() {
         onClick={() => delateContact(id)}
         type="button"
       >
-        Delate
+        Delete
       </button>
     </li>
   ));

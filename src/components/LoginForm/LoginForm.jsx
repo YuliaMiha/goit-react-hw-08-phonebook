@@ -11,7 +11,7 @@ const initialState = {
   password: '',
 };
 
-function loginReducer(state, action) {
+function LoginReducer(state, action) {
   switch (action.type) {
     case 'email':
       return { ...state, email: action.payload };
@@ -26,7 +26,7 @@ function loginReducer(state, action) {
 
 function LoginForm() {
   const dispatch = useDispatch();
-  const [state, dispatchChange] = useReducer(loginReducer, initialState);
+  const [state, dispatchChange] = useReducer(LoginReducer, initialState);
 
   const handleChange = e => {
     const { name, value } = e.target;

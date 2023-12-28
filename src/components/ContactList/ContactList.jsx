@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import {
   deleteContactsThunk,
   getContactsThunk,
-} from '../../redux/contacts/contactsThunk';
+} from '../../redux/contacts/contactThunk';
 import { selectFilteredContacts } from '../../redux/contacts/contactSelector';
 
 import scss from './ContactList.module.scss';

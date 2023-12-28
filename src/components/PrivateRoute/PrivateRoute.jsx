@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 
-import { selectToken } from '../../redux/auth/auth-selector';
+import { selectToken } from '../../redux/auth/authSelector';
 import { Outlet, Navigate } from 'react-router-dom';
 
 export const PrivateRoute = () => {

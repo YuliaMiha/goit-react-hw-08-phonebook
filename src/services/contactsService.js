@@ -1,4 +1,4 @@
-import { privateAPI } from '../api/api';
+import { privateAPI } from '../app/app';
 
 export const fetchContacts = async () => {
   const { data } = await privateAPI.get('/contacts');

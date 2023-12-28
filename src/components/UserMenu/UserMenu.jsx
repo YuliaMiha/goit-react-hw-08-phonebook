@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 
-import { logOutThunk } from '../../redux/auth/auth-thunk';
-import { selectUser } from '../../redux/auth/auth-selector';
+import { logOutThunk } from '../../redux/auth/authThunk';
+import { selectUser } from '../../redux/auth/authSelector';
 import scss from './UserMenu.module.scss';
 import { token } from 'services/authService';
 

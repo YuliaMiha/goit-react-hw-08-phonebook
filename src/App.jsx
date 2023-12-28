@@ -1,16 +1,16 @@
 import { useDispatch } from 'react-redux';
 import { useEffect, lazy } from 'react';
-import { refreshUserThunk } from './redux/auth/auth-thunk';
+import { refreshUserThunk } from './redux/auth/authThunk';
 import { Route, Routes } from 'react-router';
 import { useNavigate } from 'react-router-dom';
 
-import { PrivateRoute } from '../src/components/PrivateRoute/PrivateRoute';
-import { PublicRoute } from '../src/components/PrivateRoute/PublicRoute/PublicRoute';
+import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
+import { PublicRoute } from './components/PrivateRoute/PublicRoute/PublicRoute';
 import { Layout } from './components/Layout/Layout';
 
-const RegisterPage = lazy(() => import('./pages/RegisterPages/RegisterPages'));
-const LoginPage = lazy(() => import('./pages/LoginPages/LoginPages'));
-const ContactsPage = lazy(() => import('./pages/ContactsPages/ContactsPages'));
+const RegisterPage = lazy(() => import('./pages/RegisterPage/RegisterPage'));
+const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'));
+const ContactsPage = lazy(() => import('./pages/ContactsPage/ContactsPage'));
 
 
 export const App = () => {

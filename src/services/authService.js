@@ -1,4 +1,4 @@
-import { privateAPI, publicAPI } from '../api/api';
+import { privateAPI, publicAPI } from '../app/app';
 
 export const token = {
   set: token => {

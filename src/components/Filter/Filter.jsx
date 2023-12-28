@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectFilter } from '../../redux/contacts/contactSelector';
 import { filterContactsAction } from '../../redux/contacts/contactSlice';
-import scss from '../../styled/baseForm.module.scss';
+import scss from '../../style/baseForm.module.scss';
 
 const Filter = () => {
   const filterValue = useSelector(selectFilter);

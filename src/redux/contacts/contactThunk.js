@@ -3,8 +3,8 @@ import {
   deleteContact,
   fetchContacts,
   addContact,
-} from '../../services/contactService';
-import { token } from '../../services/authService';
+} from 'services/contactsService';
+import { token } from './../../services/authService';
 
 export const getContactsThunk = createAsyncThunk(
   'contacts/fetchAll',

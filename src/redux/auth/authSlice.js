@@ -4,7 +4,7 @@ import {
   loginThunk,
   logOutThunk,
   refreshUserThunk,
-} from './auth-thunk';
+} from './authThunk';
 const handlePending = state => {
   state.isLoading = true;
 };

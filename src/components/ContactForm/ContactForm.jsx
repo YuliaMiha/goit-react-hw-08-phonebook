@@ -3,8 +3,8 @@ import React from 'react';
 import { nanoid } from 'nanoid';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from '../../redux/contacts/contactSelector';
-import { addContactsThunk } from '../../redux/contacts/contactsThunk';
-import scss from '../../styled/baseForm.module.scss';
+import { addContactsThunk } from '../../redux/contacts/contactThunk';
+import scss from '../../style/baseForm.module.scss';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');

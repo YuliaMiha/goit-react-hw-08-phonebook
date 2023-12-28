@@ -3,7 +3,7 @@ import {
   addContactsThunk,
   getContactsThunk,
   deleteContactsThunk,
-} from '../../redux/contacts/contactsThunk';
+} from './contactThunk';
 
 const handlePending = state => {
   state.contacts.isLoading = true;

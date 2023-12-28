@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { UserMenu } from './../UserMenu/UserMenu';
 import { AuthNav } from './../AuthNav/AuthNav';
-import { selectToken } from '../../redux/auth/auth-selector';
+import { selectToken } from '../../redux/auth/authSelector';
 import scss from './AppBar.module.scss';
 
 export const AppBar = () => {

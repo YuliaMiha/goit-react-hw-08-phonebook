@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import LockIcon from '@mui/icons-material/Lock';
 import EmailIcon from '@mui/icons-material/Email';
 import PersonIcon from '@mui/icons-material/Person';
-import scss from '../../style/baseForm.module.scss';
+import scss from '../../styled/baseForm.module.scss';
 
 const initialState = {
   name: '',

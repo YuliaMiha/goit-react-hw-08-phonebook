@@ -40,6 +40,12 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         state.user = payload.user;
+      
+        // Log the token to the console
+        console.log('Token:', payload.token);
+      
+        // Save only the token to local storage
+        localStorage.setItem('token', payload.token);
       })
 
       .addCase(logOutThunk.pending, handlePending)
